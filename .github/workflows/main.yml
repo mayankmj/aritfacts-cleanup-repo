@@ -40,5 +40,5 @@ jobs:
         
       - uses: geekyeggo/delete-artifact@v5
         with:
-          name: okay-to-keep
+          name: my-artifact
           failOnError: false
