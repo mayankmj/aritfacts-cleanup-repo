@@ -2,7 +2,7 @@ name: Scheduler
 
 on:
   schedule:
-    - cron: '35 12 * * *'  # Runs every day at 12:35 PM UTC
+    - cron: '10 7 * * *'  # Runs every day at 12:40 PM IST (7:10 AM UTC)
 
 jobs:
   Scheduler:
