@@ -1,14 +1,8 @@
 name: Scheduler
 
 on:
-  workflow_dispatch:
-    inputs:
-      target_service:
-        description: 'Input a service name (e.g., demo-app)'
-        required: true
-      target_version:
-        description: 'Input a version (e.g., v1.0.0)'
-        required: true
+  schedule:
+    - cron: '35 12 * * *'  # Runs every day at 12:35 PM UTC
 
 jobs:
   Scheduler:
@@ -25,11 +19,6 @@ jobs:
           name: my-artifact
           path: test.txt
 
-      # - uses: geekyeggo/delete-artifact@v5
-      #   with:
-      #     name: my-artifact
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: geekyeggo/delete-artifact@v5
         with:
-          commit_message: Commit test file
-          file_pattern: test.txt
+          name: my-artifact
