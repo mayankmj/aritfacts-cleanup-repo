@@ -25,9 +25,6 @@ jobs:
           name: my-artifact
           path: test.txt
 
-      # - uses: geekyeggo/delete-artifact@v5
-      #   with:
-      #     name: my-artifact
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
