@@ -1,5 +1,4 @@
 name: Artifacts Cleanup
-
 on:
   workflow_dispatch:
     inputs:
@@ -25,5 +24,8 @@ jobs:
           path: test.txt
           
       - uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+      - uses: geekyeggo/delete-artifact@v5
         with:
           name: my-artifact
