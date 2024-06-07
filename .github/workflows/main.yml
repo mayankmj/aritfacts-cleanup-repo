@@ -37,3 +37,8 @@ jobs:
 
       - name: List files after download
         run: ls -la my-artifact
+        
+      - uses: geekyeggo/delete-artifact@v5
+        with:
+          name: okay-to-keep
+          failOnError: false
